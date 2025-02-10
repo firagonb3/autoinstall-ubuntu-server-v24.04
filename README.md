@@ -16,35 +16,35 @@ Guía para crear una imagen de instalación auto instalable de **Ubuntu Server 2
 Para descargar el archivo principal de autoinstalación, usa el siguiente comando:
 
 ```sh
-curl -L -o user-data https://raw.githubusercontent.com/firagon/autoinstall-ubuntu-server-v24.04/master/autoinstall/autoinstall.yaml
+curl -L -o user-data https://raw.githubusercontent.com/firagonb3/autoinstall-ubuntu-server-v24.04/refs/heads/main/autoinstall/autoinstall.yaml
 ```
 
 Para descargar el archivo principal de autoinstalación con actualización automática, usa el siguiente comando:
 
 ```sh
-curl -L -o user-data https://raw.githubusercontent.com/firagon/autoinstall-ubuntu-server-v24.04/master/autoinstall/autoinstall-upgrade.yaml
+curl -L -o user-data https://raw.githubusercontent.com/firagonb3/autoinstall-ubuntu-server-v24.04/refs/heads/main/autoinstall/autoinstall-upgrade.yaml
 ```
 
 Ejemplos adicionales según la configuración de red:
 
 ```sh
 # Configuración con DHCP activado
-curl -L -o user-data https://raw.githubusercontent.com/firagon/autoinstall-ubuntu-server-v24.04/master/autoinstall/autoinstall-DHCP-on.yaml
+curl -L -o user-data https://raw.githubusercontent.com/firagonb3/autoinstall-ubuntu-server-v24.04/refs/heads/main/autoinstall/autoinstall-DHCP-on.yaml
 
 # Configuración con DHCP desactivado (solo DHCPv4)
 # requiere modificar la dirección IP de la red
-curl -L -o user-data https://raw.githubusercontent.com/firagon/autoinstall-ubuntu-server-v24.04/master/autoinstall/autoinstall-DHCP-off.yaml
+curl -L -o user-data https://raw.githubusercontent.com/firagonb3/autoinstall-ubuntu-server-v24.04/refs/heads/main/autoinstall/autoinstall-DHCP-off.yaml
 ```
 
 Ejemplo de configuración de red con actualización automática:
 
 ```sh
 # Configuración con DHCP activado (DHCPv4 y DHCPv6)
-curl -L -o user-data https://raw.githubusercontent.com/firagon/autoinstall-ubuntu-server-v24.04/master/autoinstall/autoinstall-DHCP-on-upgrade.yaml
+curl -L -o user-data https://raw.githubusercontent.com/firagonb3/autoinstall-ubuntu-server-v24.04/refs/heads/main/autoinstall/autoinstall-DHCP-on-upgrade.yaml
 
 # Configuración con DHCP desactivado (DHCPv4 y DHCPv6)
 # requiere modificar la dirección IP de la red
-curl -L -o user-data https://raw.githubusercontent.com/firagon/autoinstall-ubuntu-server-v24.04/master/autoinstall/autoinstall-DHCP-off-upgrade.yaml
+curl -L -o user-data https://raw.githubusercontent.com/firagonb3/autoinstall-ubuntu-server-v24.04/refs/heads/main/autoinstall/autoinstall-DHCP-off-upgrade.yaml
 ```
 
 ---
@@ -161,13 +161,13 @@ Puedes probar la configuración directamente en una máquina virtual con la imag
 2. Descarga el archivo de configuración YAML:
 
    ```sh
-   curl -L -o autoinstall.yaml https://raw.githubusercontent.com/firagon/autoinstall-ubuntu-server-v24.04/master/autoinstall/autoinstall.yaml
+   curl -L -o autoinstall.yaml https://raw.githubusercontent.com/firagonb3/autoinstall-ubuntu-server-v24.04/refs/heads/main/autoinstall/autoinstall.yaml
    ```
 
    Para descargar el archivo principal de autoinstalación con actualización automática, usa el siguiente comando:
 
    ```sh
-   curl -L -o autoinstall.yaml https://raw.githubusercontent.com/firagon/autoinstall-ubuntu-server-v24.04/master/autoinstall/autoinstall-upgrade.yaml
+   curl -L -o autoinstall.yaml https://raw.githubusercontent.com/firagonb3/autoinstall-ubuntu-server-v24.04/refs/heads/main/autoinstall/autoinstall-upgrade.yaml
    ```
 
 3. Identifica el proceso del instalador con:
