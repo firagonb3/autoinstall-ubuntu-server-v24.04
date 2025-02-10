@@ -1,0 +1,1 @@
+# autoinstall-ubuntu-server-v24.04
