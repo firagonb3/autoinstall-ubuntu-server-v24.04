@@ -42,7 +42,7 @@ Ejemplo de configuración de red con actualización automática:
 # Configuración con DHCP activado (DHCPv4 y DHCPv6)
 curl -L -o user-data https://raw.githubusercontent.com/firagonb3/autoinstall-ubuntu-server-v24.04/refs/heads/main/autoinstall/autoinstall-DHCP-on-upgrade.yaml
 
-# Configuración con DHCP desactivado (DHCPv4 y DHCPv6)
+# Configuración con DHCP desactivado (solo DHCPv4)
 # requiere modificar la dirección IP de la red
 curl -L -o user-data https://raw.githubusercontent.com/firagonb3/autoinstall-ubuntu-server-v24.04/refs/heads/main/autoinstall/autoinstall-DHCP-off-upgrade.yaml
 ```
