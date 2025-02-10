@@ -1,0 +1,33 @@
+#cloud-config
+autoinstall:
+  version: 1
+  refresh-installer:
+    update: true
+  identity:
+    hostname: ubuntu-server
+    password: $6$.EBtzSOZolqm4Gbs$27G8kdOZPps3WfrBhEbzQsOEES3PbjUDIKpbA/utynZoJ/NhlWeh3DL.XrDtmZ0t8NbLpRYBXSJJ8GcoPycvi/
+    realname: ubuntu
+    username: ubuntu
+  keyboard:
+    layout: es
+    toggle: null
+    variant: ''
+  locale: es_ES.UTF-8
+  network:
+    ethernets:
+      ens33:
+        dhcp4: true
+        dhcp6: true
+    version: 2
+  ssh:
+    allow-pw: true
+    authorized-keys: []
+    install-server: true
+  storage:
+    layout:
+      name: lvm
+  late-commands:
+  - curtin in-target -- sh -c 'echo "DPkg::Options { \"--force-confnew\"; };" > /etc/apt/apt.conf.d/50unattended-upgrades'
+  - curtin in-target -- apt-get update
+  - curtin in-target -- apt-get -o Dpkg::Options::="--force-confnew" dist-upgrade -y
+  - curtin in-target -- apt-get autoremove -y
